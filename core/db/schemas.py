@@ -1,5 +1,5 @@
 from flask_marshmallow import Marshmallow
-from marshmallow import fields, validate, EXCLUDE
+from marshmallow import fields, validate, EXCLUDE, post_dump
 
 ma = Marshmallow()
 

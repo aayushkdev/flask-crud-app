@@ -24,10 +24,7 @@ def handle_validation(schema):
     def decorator(f):
         @wraps(f)
         def wrapper(*args, **kwargs):
-            try:
-                data = schema.load(request.json)
-            except ValidationError as err:
-                return format_response(data=err.messages, status=400)
+            data = schema.load(request.json)
             return f(data, *args, **kwargs)
         return wrapper
     return decorator
