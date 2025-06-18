@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_DEBUG: "${FLASK_DEBUG}"
+      SECRET_KEY: "${SECRET_KEY}"
+      MONGO_URI: "${MONGO_URI}"
+    volumes:
+      - .:/app
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6.0
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
