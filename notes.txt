@@ -1,0 +1,28 @@
+Flask CRUD App Notes
+====================
+
+This file contains notes and documentation for the Flask CRUD application.
+
+Features:
+- User management with CRUD operations
+- Database integration with SQLAlchemy
+- RESTful API endpoints
+- Docker containerization
+- Vercel deployment configuration
+
+Development Setup:
+1. Install dependencies: pip install -r requirements.txt
+2. Initialize database: python -m core.db.init_db
+3. Run application: python -m core.app
+
+API Endpoints:
+- GET /users - List all users
+- POST /users - Create new user
+- GET /users/{id} - Get user by ID
+- PUT /users/{id} - Update user
+- DELETE /users/{id} - Delete user
+
+Database Models:
+- User model with fields for name, email, and timestamps
+
+Last updated: 2025-06-29
